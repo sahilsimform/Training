@@ -7,6 +7,6 @@ s, b, m, d = map(int, input().split())
 classic_cost = b + ((km//s)*m) + (km*d)
 
 if online_cost<=classic_cost:
-    print('Online Taxi')
+    print('Online Taxi ')
 else:
-    print('Classic Taxi')
+    print('Classic Taxi ')
