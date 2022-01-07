@@ -1,0 +1,21 @@
+body {
+    background-image: url("https://wallpaperaccess.com/full/2159510.jpg");
+}
+
+h1{
+    color:rgba(41, 228, 88, 0.87);
+    text-align: center;
+    font-size: 300%;
+    font-family: verdana, arial;
+}
+
+p {
+    color:rgba(167, 189, 41, 0.87);
+    position: relative;
+    text-align: center;
+    font-size: 100%;
+    font-family: verdana, arial;
+    border: 2px solid rgba(180, 36, 180, 0.76);
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
