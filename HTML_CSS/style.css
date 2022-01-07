@@ -1,0 +1,14 @@
+body {
+    background-image: url("https://wallpaperaccess.com/full/2159510.jpg");
+}
+
+h1{
+    color:rgba(41, 228, 88, 0.87);
+    text-align: center;
+}
+
+p {
+    color:rgba(167, 189, 41, 0.87);
+    position: relative;
+    text-align: center
+}
