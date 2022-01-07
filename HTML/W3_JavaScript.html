@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <h1>My First JavaScript</h1>
+
+    <button type="button"
+    onclick="document.getElementById('demo').innerHTML = Date()">
+    Click me to display Date and Time.</button>
+
+    <p id="demo"></p>
+    <hr> <hr>
+
+    <p id="demo1"></p>
+
+    <hr> <hr>
+
+    <button type="button" onclick="test()">Click Me</button>
+    <p id="demo2"></p>
+
+    <hr> <hr>
+
+    <h1>My First JavaScript</h1>
+    <p id="demo3">javascript can do CSS</p>
+
+    <button type="button" onclick="sahil()">Click Me</button>
+
+
+    <script>
+        document.getElementById('demo1').innerHTML ="Hello JavaScript..!";
+        
+        
+        function test() {
+            document.getElementById('demo2').innerHTML ="Hello JavaScript..!";
+        }
+
+        function sahil(){
+            document.getElementById("demo3").style.fontSize ="25px";
+            document.getElementById("demo3").style.color ="red";
+            document.getElementById("demo3").style.backgroundColor ="yellow";
+        }
+
+    </script>
+    <noscript>Sorry, your browser does not support JavaScript!</noscript>
+</body>
+</html>
