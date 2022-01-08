@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form</title>
+</head>
+<body>
+    <h2>HTML Form</h2>
+    <fieldset>
+        <legend>Bio</legend>
+    <form>
+        <label for="fname">First Name : </label><br>
+        <input type="text" id="fname" name="fname" value="First Name"><br>
+        <label for="lname">Last Name : </label><br>
+        <input type="text" id="lname" name="lname" value="Last Name"><br><br>
+        <input type="submit" value="Submit">
+    </fieldset>
+    </form>
+<hr> <hr>
+    <h2>HTML Radio Button</h2>
+    <form>
+        <input type="checkbox" id="html" name="fav_language" value="HTML">
+        <label for="html">HTML</label><br>
+        <input type="radio" id="css" name="fav_language" value="CSS">
+        <label for="css">CSS</label><br>
+        <input type="text" id="javascript" name="fav_language" value="JavaScript">
+        <label for="javascript">JavaScript</label><br>
+    </form>
+<hr> <hr>
+    <h1>Use of selected</h1>
+    <form>
+        
+            <label for="car">Choose a car: </label>
+            <select id="car" name="cars" multiple>
+                <option value="Audi">Audi</option>
+                <option value="BMW">BMW</option>
+                <option value="KIA">KIA</option>
+                <option value="Farari">Farari</option>
+            </select><br>
+            <input type="submit" >
+        
+    </form>
+
+    <hr> <hr>
+    <h1>Use of text area</h1>
+    <form>
+        <textarea  name="message" id="message" rows="10" cols="80">Chat with Us</textarea><br><br>
+        <input type="submit">
+    </form>
+    <hr> <hr>
+    <h1>Use of button</h1><br>
+    <button type="button" onclick="alert('Welcome to sahil web page')" >Click Me..!</button>
+
+    <hr> <hr>
+    <h1>use of datalist</h1>
+    <form action="/action_page.php">
+        <input list="browsers" name="browser">
+        <datalist id="browsers">
+            <option value="Internet Explorer">
+            <option value="Firefox">
+            <option value="Chrome">
+            <option value="Opera">
+            <option value="Safari">
+        </datalist>
+        <input type="submit">
+        </form>
+        <hr> <hr>
+
+        <h1>use of month tag</h1>
+        <form action="/action_page.php">
+            <label for="bdaymonth">Birthday (month and year):</label>
+            <input type="month" id="bdaymonth" autofocus name="bdaymonth">
+            <input type="submit" value="Submit">
+        </form>
+
+</body>
+</html>
