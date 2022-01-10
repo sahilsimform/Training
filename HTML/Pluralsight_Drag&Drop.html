@@ -1,133 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Drag and drop</title>
     <style>
-        [data-role="drag-drop-target"]{
-            float: left;
-            width: 500px;
-            height: 376px;
-            margin: 10px;
-            padding: 10px;
-            border: 3px solid #ddd;
-            border-radius:4px;
-        }
-        .over{
-            background-color: #ffc;
-        }
+      [data-role="drag-drop-target"] {
+        float: left;
+        width: 500px;
+        height: 376px;
+        margin: 10px;
+        padding: 10px;
+        border: 3px solid #ddd;
+        border-radius: 4px;
+      }
+      .over {
+        background-color: #ffc;
+      }
 
-        [draggable="true"]{
-            -moz-user-select: none;
-            -khtml-user-select: none;
-            -webkit-user-select: none;
-            user-select: none;
-            -khtml-user-drag: element;
-            -webkit-user-drag: element;
-        }
-        .drag{
-            opacity: 0.25;
-        }
-        .img-responsive{
-            width: 500px;
-            height: 376px;
-        }
+      [draggable="true"] {
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        user-select: none;
+        -khtml-user-drag: element;
+        -webkit-user-drag: element;
+      }
+      .drag {
+        opacity: 0.25;
+      }
+      .img-responsive {
+        width: 500px;
+        height: 376px;
+      }
     </style>
-</head>
-<body>
-    
-        <div id="source-container" data-role="drag-drop-target">
-            <img id="home-snapshot" draggable="true" class="img-responsive" src="../Media/Pic2.jpg" >
-        </div>
-        <div id="target-container" data-role="drag-drop-target"></div>
-        
+  </head>
+  <body>
+    <div id="source-container" data-role="drag-drop-target">
+      <img
+        id="home-snapshot"
+        draggable="true"
+        class="img-responsive"
+        src="../Media/Pic2.jpg"
+      />
+    </div>
+    <div id="target-container" data-role="drag-drop-target"></div>
 
     <script>
+      var sourceContainerId;
 
-    var sourceContainerId;
-
-        var dragStart = function(e){
-            console.log('source: dragstart')
-            try{
-                e.dataTransfer.setData('text/plain',e.target.id);
-            }
-            catch(ex){
-                e.dataTransfer.setData('text',e.target.id);
-            }
-            e.dataTransfer.effectAllowed='move';
-            sourceContainerId=this.parentElement.id;
-        };
-
-        var cancel =  function(e) {
-            if(e.preventDefault) e.preventDefault();
-            if(e.stopPropagation) e.stopPropagation();
-            return false;
-        };
-
-        var dragEnd = function(e){
-            console.log('source:dragend');
-        };
-
-        var drag = function(e){
-            console.log('source:drag');
-        };
-
-        var dropped = function(e){
-            var id;
-            console.log('target: drop');
-            if(this.id !== sourceContainerId){
-            cancel(e);
-            try{
-                id=e.dataTransfer.getData('text/plain');
-            }catch(ex){
-                id=e.dataTransfer.getData('Text');
-            }
-            e.target.appendChild(document.querySelector('#'+id));
+      var dragStart = function (e) {
+        console.log("source: dragstart");
+        try {
+          e.dataTransfer.setData("text/plain", e.target.id);
+        } catch (ex) {
+          e.dataTransfer.setData("text", e.target.id);
         }
-        };
+        e.dataTransfer.effectAllowed = "move";
+        sourceContainerId = this.parentElement.id;
+      };
 
-        var dragEnter = function(e){
-            cancel(e);
-            console.log('target:dragenter');
-        };
+      var cancel = function (e) {
+        if (e.preventDefault) e.preventDefault();
+        if (e.stopPropagation) e.stopPropagation();
+        return false;
+      };
 
-        var dragOver = function(e){
-            cancel(e);
-            console.log('target: dragover');
-        };
+      var dragEnd = function (e) {
+        console.log("source:dragend");
+      };
 
-        var dragLeave = function(e){
-            console.log('target: dragleave');
-        };
+      var drag = function (e) {
+        console.log("source:drag");
+      };
 
-        var targets = document.querySelectorAll('[data-role="drag-drop-target"]');
-        [].forEach.call(targets, function(target){
-            target.addEventListener('drop',dropped,false);
-            target.addEventListener('dragenter',dragEnter,false);
-            target.addEventListener('dragover',dragOver,false);
-            target.addEventListener('dragleave',dragLeave,false);
+      var dropped = function (e) {
+        var id;
+        console.log("target: drop");
+        if (this.id !== sourceContainerId) {
+          cancel(e);
+          try {
+            id = e.dataTransfer.getData("text/plain");
+          } catch (ex) {
+            id = e.dataTransfer.getData("Text");
+          }
+          e.target.appendChild(document.querySelector("#" + id));
+        }
+      };
 
-        });
-        
-        var sources= document.querySelectorAll('[draggable="true"]');
-        [].forEach.call(sources,function(source){
-            source.addEventListener('dragstart',dragStart,false);
-            source.addEventListener('drag',drag,false);
-            source.addEventListener('dragend',dragEnd,false);
-        })
+      var dragEnter = function (e) {
+        cancel(e);
+        console.log("target:dragenter");
+      };
 
-        var img = document.querySelector('#home-snapshot');
-        img.addEventListener('dragstart',dragstart,false);
+      var dragOver = function (e) {
+        cancel(e);
+        console.log("target: dragover");
+      };
 
-        var target= document.querySelector('#target-container');
-        target.addEventListener('drop',dropped,false);
-        target.addEventListener('dragenter',cancel,false);
-        target.addEventListener('dragover',cancel,false);
+      var dragLeave = function (e) {
+        console.log("target: dragleave");
+      };
 
+      var targets = document.querySelectorAll('[data-role="drag-drop-target"]');
+      [].forEach.call(targets, function (target) {
+        target.addEventListener("drop", dropped, false);
+        target.addEventListener("dragenter", dragEnter, false);
+        target.addEventListener("dragover", dragOver, false);
+        target.addEventListener("dragleave", dragLeave, false);
+      });
 
+      var sources = document.querySelectorAll('[draggable="true"]');
+      [].forEach.call(sources, function (source) {
+        source.addEventListener("dragstart", dragStart, false);
+        source.addEventListener("drag", drag, false);
+        source.addEventListener("dragend", dragEnd, false);
+      });
+
+      var img = document.querySelector("#home-snapshot");
+      img.addEventListener("dragstart", dragstart, false);
+
+      var target = document.querySelector("#target-container");
+      target.addEventListener("drop", dropped, false);
+      target.addEventListener("dragenter", cancel, false);
+      target.addEventListener("dragover", cancel, false);
     </script>
-
-</body>
+  </body>
 </html>
