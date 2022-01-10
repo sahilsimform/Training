@@ -1,23 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Input tag</title>
-</head>
-<body>
+  </head>
+  <body>
     <form id="email-form">
-        <input type="text" id="username" placeholder="username" pattern="[a-zA-Z ]{5,}" maxlength="30" title="Username" data-content="A username is required. The username must be a series of alpha-numeric characters only." data-role="validate" class="form-control">
-        <input type="email" id="email" placeholder="email address" title="Email" required data-content="An email address is required" data-content="An email address is required." data-role="validate" class="form-control">
-        <div class="push-down-top">
-            <button type="button" class="btn btn-link">Cancel</button>
-            <button type="button" id="change-button" data-role="trigger-validation" class="btn">Login</button>
-        </div>
+      <input
+        type="text"
+        id="username"
+        placeholder="username"
+        pattern="[a-zA-Z ]{5,}"
+        maxlength="30"
+        title="Username"
+        data-content="A username is required. The username must be a series of alpha-numeric characters only."
+        data-role="validate"
+        class="form-control"
+      />
+      <input
+        type="email"
+        id="email"
+        placeholder="email address"
+        title="Email"
+        required
+        data-content="An email address is required"
+        data-content="An email address is required."
+        data-role="validate"
+        class="form-control"
+      />
+      <div class="push-down-top">
+        <button type="button" class="btn btn-link">Cancel</button>
+        <button
+          type="button"
+          id="change-button"
+          data-role="trigger-validation"
+          class="btn"
+        >
+          Login
+        </button>
+      </div>
     </form>
     <div>The form is: <span id="msg"></span></div>
-</body>
-<!-- <script>
+  </body>
+  <!-- <script>
     &(function(){
         var validationModule = function();
 
