@@ -12,8 +12,8 @@ body {
   background-repeat: no-repeat;
   /* background-repeat: center; */
   background-position: center center;
+  /* background-attachment: scroll;*/
   background-attachment: fixed;
-  /* background-attachment: scroll; */
 }
 h1 {
   background-color: green;
