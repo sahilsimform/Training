@@ -1,0 +1,38 @@
+* {
+  /* margin: 0;
+  padding: 0; */
+  text-align: center;
+}
+body {
+  background-color: rgba(53, 216, 181, 0.884);
+}
+.border1 {
+  border-style: dotted;
+}
+.border2 {
+  border-style: dashed;
+}
+.border3 {
+  border-style: solid;
+}
+.border4 {
+  border-style: double;
+}
+.border5 {
+  border-style: groove;
+}
+.border6 {
+  border-style: ridge;
+}
+.border7 {
+  border-style: inset;
+}
+.border8 {
+  border-style: outset;
+}
+.border9 {
+  border-style: hidden;
+}
+.border10 {
+  border-style: dotted dashed solid double;
+}
