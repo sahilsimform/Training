@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+  </script>
+  <link rel="stylesheet" href="style.css">
+  </link>
+  <title>W3 school JS</title>
+</head>
+
+<body style="background-color: rgba(211, 35, 35, 0.767); color: white;">
+  <div class="container" style="border: 1px solid white;">
+    <h1>This is a javascript page to se the use of the functions.</h1>
+    <hr>
+    <h2>Use of the Number keyword</h2>
+    <p class="" id="NUMBER"></p>
+    <hr>
+    <hr>
+    <h2>Use of the ParseInt keyword</h2>
+    <p class="" id="PARSE_INT"></p>
+    <hr>
+    <hr>
+    <h2>Use of the ParseFloat keyword</h2>
+    <p class="" id="PARSE_FLOAT"></p>
+    <hr>
+    <hr>
+    <h2>Use of the MAX_VALUE keyword</h2>
+    <p class="" id="MAX_VALUE"></p>
+    <hr>
+    <hr>
+    <h2>Use of the MIN_VALUE keyword</h2>
+    <p class="" id="MIN_VALUE"></p>
+    <hr>
+    <hr>
+    <h2>Use of the POSITIVE_INFINITY keyword</h2>
+    <p class="" id="POSITIVE_INFINITY"></p>
+    <hr>
+    <hr>
+    <h2>Use of the NEGATIVE_INFINITY keyword</h2>
+    <p class="" id="NEGATIVE_INFINITY"></p>
+    <hr>
+    <hr>
+    <h2>Use of the nan keyword</h2>
+    <p class="" id="nan"></p>
+
+
+  </div>
+
+
+
+  <script>
+    document.getElementById("NUMBER").innerHTML =
+      Number(true) + "<br>" +
+      Number(false) + "<br>" +
+      Number("10") + "<br>" +
+      Number("   10") + "<br>" +
+      Number("10   ") + "<br>" +
+      Number("  10  ") + "<br>" +
+      Number("10.33") + "<br>" +
+      Number("10,33") + "<br>" +
+      Number("10 33") + "<br>" +
+      Number("Sahil");
+
+    document.getElementById("PARSE_INT").innerHTML =
+      parseInt("-10") + "<br>" +
+      parseInt("-10.33") + "<br>" +
+      parseInt("10") + "<br>" +
+      parseInt("10 6") + "<br>" +
+      parseInt("10 years") + "<br>" +
+      parseInt("years 10");
+
+    document.getElementById("PARSE_FLOAT").innerHTML =
+      parseFloat("10") + "<br>" +
+      parseFloat("10.33") + "<br>" +
+      parseFloat("10 6") + "<br>" +
+      parseFloat("10 years") + "<br>" +
+      parseFloat("years 10");
+
+
+    let x = Number.MAX_VALUE;
+    document.getElementById("MAX_VALUE").innerHTML = x;
+
+    let y = Number.MIN_VALUE;
+    document.getElementById("MIN_VALUE").innerHTML = y;
+
+    let z = Number.POSITIVE_INFINITY;
+    document.getElementById("POSITIVE_INFINITY").innerHTML = z;
+
+    let b = -1 / 0;
+    document.getElementById("NEGATIVE_INFINITY").innerHTML = b;
+
+    document.getElementById("nan").innerHTML = Number.NaN;
+
+  </script>
+</body>
+
+</html>

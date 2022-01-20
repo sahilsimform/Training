@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="style.css">
+    </link>
+    <title>W3 school JS</title>
+    <style>
+        p {
+            color: red;
+        }
+
+        hr {
+            color: black;
+        }
+
+        .container {
+            border: 1px solid rgb(216, 204, 33)
+        }
+
+        body {
+            background-color: rgba(38, 91, 204, 0.781);
+            color: rgb(216, 204, 33);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>JavaScript elements</h1>
+        <input type="text" id="age" value="18" />
+        <button class="btn btn-success" type="button" onclick="age_find()">Check It</button>
+        <p id="check"></p>
+        <hr>
+        <hr>
+        <h2>Date validation</h2>
+        <p id="date_valid">Good Morning</p>
+        <hr>
+        <hr>
+        <h2>Date with if else</h2>
+        <p id="date_valid2"></p>
+        <hr>
+        <hr>
+        <h2>Date with if else if</h2>
+        <p id="date_valid3"></p>
+        <hr>
+        <hr>
+        <h2>Date with switch</h2>
+        <p id="DAY"></p>
+        <hr>
+        <hr>
+        <h2>Date with for</h2>
+        <p id="for_1"></p>
+        <hr>
+        <hr>
+        <h2>Date with for</h2>
+        <p id="NUM_1"></p>
+        <hr>
+        <hr>
+        <h2>FOR</h2>
+        <p id="FOR_2"></p>
+        <hr>
+        <hr>
+        <h2>FOR</h2>
+        <p id="FOR_3"></p>
+        <hr>
+        <hr>
+        <h2>While</h2>
+        <p id="WHILE_1"></p>
+        <hr>
+        <hr>
+        <h2>While</h2>
+        <p id="DO_WHILE"></p>
+        <hr>
+        <hr>
+        <h2>FOR</h2>
+        <p id="FOR_4"></p>
+        <hr>
+        <hr>
+        <h2>FOR IF BREAK</h2>
+        <p id="FOR_IF_1"></p>
+        <hr>
+        <hr>
+        <h2>FOR IF CONTINUE</h2>
+        <p id="FOR_IF_CONTINUE"></p>
+
+    </div>
+    <script>
+        {
+            function age_find() {
+                let age = document.getElementById("age").value;
+                let vote = (age < 18) ? "Too Young" : "Old Enough";
+                document.getElementById("check").innerHTML = vote + "to vote.";
+            }
+
+            if (new Date().getHours() < 18) {
+                document.getElementById("date_valid").innerHTML = "Good day!";
+            }
+        } {
+            const hour = new Date().getHours();
+            let greeting;
+
+            if (hour < 18) {
+                greeting = "Good day";
+            } else {
+                greeting = "Good evening";
+            }
+
+            document.getElementById("date_valid2").innerHTML = greeting;
+        } {
+            const time = new Date().getHours();
+            let greeting;
+            if (time < 10) {
+                greeting = "Good morning";
+            } else if (time < 20) {
+                greeting = "Good day";
+            } else {
+                greeting = "Good evening";
+            }
+            document.getElementById("date_valid3").innerHTML = greeting;
+        } {
+            let day;
+            switch (new Date().getDay()) {
+                case 0:
+                    day = "Sunday";
+                    break;
+                case 1:
+                    day = "Monday";
+                    break;
+                case 2:
+                    day = "Tuesday";
+                    break;
+                case 3:
+                    day = "Wednesday";
+                    break;
+                case 4:
+                    day = "Thursday";
+                    break;
+                case 5:
+                    day = "Friday";
+                    break;
+                case 6:
+                    day = "Saturday";
+            }
+            document.getElementById("DAY").innerHTML = "Today is " + day;
+        }
+
+        {
+            const for_1 = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+
+            let text = "";
+            for (let i = 0; i < for_1.length; i++) {
+                text += for_1[i] + "<br>";
+            }
+
+            document.getElementById("for_1").innerHTML = text;
+        } {
+            const numbers = [45, 4, 9, 16, 25];
+
+            let txt = "";
+            for (let x in numbers) {
+                txt += numbers[x] + "<br>";
+            }
+
+            document.getElementById("NUM_1").innerHTML = txt;
+        } {
+            const cars = ["BMW", "Volvo", "Mini"];
+
+            let text = "";
+            for (let x of cars) {
+                text += x + "<br>";
+            }
+
+            document.getElementById("FOR_2").innerHTML = text;
+        } {
+            let language = "JavaScript";
+
+            let text = "";
+            for (let x of language) {
+                text += x + "<br>";
+            }
+
+            document.getElementById("FOR_3").innerHTML = text;
+        } {
+            let text = "";
+            let i = 0;
+            while (i < 10) {
+                text += "<br>The number is " + i;
+                i++;
+            }
+            document.getElementById("WHILE_1").innerHTML = text;
+        } {
+            let text = ""
+            let i = 0;
+
+            do {
+                text += "<br>The number is " + i;
+                i++;
+            }
+            while (i < 10);
+
+            document.getElementById("DO_WHILE").innerHTML = text;
+        } {
+            const cars = ["BMW", "Volvo", "Saab", "Ford"];
+
+            let i = 0;
+            let text = "";
+            while (cars[i]) {
+                text += cars[i] + "<br>";
+                i++;
+            }
+
+            document.getElementById("FOR_4").innerHTML = text;
+        } {
+            let text = "";
+            for (let i = 0; i < 10; i++) {
+                if (i === 3) {
+                    break;
+                }
+                text += "The number is " + i + "<br>";
+            }
+
+            document.getElementById("FOR_IF_1").innerHTML = text;
+        } {
+            let text = "";
+            for (let i = 0; i < 10; i++) {
+                if (i === 3) {
+                    continue;
+                }
+                text += "The number is " + i + "<br>";
+            }
+            document.getElementById("FOR_IF_CONTINUE").innerHTML = text;
+        }
+
+    </script>
+
+</body>
+
+</html>

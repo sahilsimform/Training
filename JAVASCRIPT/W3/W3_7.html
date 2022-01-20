@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="style.css">
+    </link>
+    <title>W3 school JS</title>
+    <style>
+        p {
+            color: red;
+        }
+
+        hr {
+            color: black;
+        }
+
+        .container {
+            border: 1px solid rgb(0, 0, 0);
+        }
+
+        body {
+            background-color: rgba(129, 206, 28, 0.781);
+            color: rgb(25, 56, 194);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>JavaScript Date/Time</h1>
+        <hr>
+        <h2>Date/Time</h2>
+        <p id="date1"></p>
+        <hr>
+        <hr>
+        <h2>fixed date time</h2>
+        <p id="date2"></p>
+        <hr>
+        <hr>
+        <h2>fixed date time</h2>
+        <p id="date3"></p>
+        <hr>
+        <hr>
+        <h2>Fixed starting date</h2>
+        <p id="date4"></p>
+        <hr>
+        <hr>
+        <h2>Fixed starting date</h2>
+        <p id="date5"></p>
+        <hr>
+        <hr>
+        <h2>Fixed date in string</h2>
+        <p id="date6"></p>
+
+
+
+    </div>
+    <script>
+        const date1 = new Date();
+        document.getElementById("date1").innerHTML = date1;
+
+        const date2 = new Date(2018, 11, 24, 10, 33, 30, 0);
+        document.getElementById("date2").innerHTML = date2;
+
+        const date3 = new Date("October 13, 2014 11:13:00");
+        document.getElementById("date3").innerHTML = date3;
+
+        const date4 = new Date(0);
+        document.getElementById("date4").innerHTML = date4;
+
+        const date5 = new Date(100000000000);
+        document.getElementById("date5").innerHTML = date5;
+
+        const date6 = new Date();
+        document.getElementById("date6").innerHTML = date6.toString();
+
+    </script>
+</body>
+
+</html>

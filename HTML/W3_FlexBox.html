@@ -1,99 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flex Box</title>
 
-    <style>
-      * {
-        box-sizing: border-box;
-      }
-      body {
-        font-family: Arial, Helvetica, sans-serif;
-      }
-      header {
-        background-color: rgb(229, 224, 149);
-        padding: 30px;
-        text-align: center;
-        font-align: center;
-        color: black;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flex Box</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    header {
+      background-color: rgb(229, 224, 149);
+      padding: 30px;
+      text-align: center;
+      font-align: center;
+      color: black;
+    }
+
+    section {
+      display: -webkit-flex;
+      display: flex;
+    }
+
+    nav {
+      -webkit-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      background: #ccc;
+      padding: 20px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    article {
+      -webkit-flex: 3;
+      -ms-flex: 3;
+      background-color: #f1f1f1;
+      padding: 10px;
+    }
+
+    footer {
+      background-color: #777;
+      padding: 10px;
+      text-align: center;
+      color: white;
+    }
+
+    @media (max-width: 600px) {
       section {
-        display: -webkit-flex;
-        display: flex;
+        -webkit-flex-direction: column;
+        flex-direction: column;
       }
-      nav {
-        -webkit-flex: 1;
-        -ms-flex: 1;
-        flex: 1;
-        background: #ccc;
-        padding: 20px;
-      }
-      nav ul {
-        list-style-type: none;
-        padding: 0;
-      }
-      article {
-        -webkit-flex: 3;
-        -ms-flex: 3;
-        background-color: #f1f1f1;
-        padding: 10px;
-      }
-      footer {
-        background-color: #777;
-        padding: 10px;
-        text-align: center;
-        color: white;
-      }
-      @media (max-width: 600px) {
-        section {
-          -webkit-flex-direction: column;
-          flex-direction: column;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <h2>CSS Layout</h2>
-    <p>this is a paragraph tag</p>
+    }
 
-    <header>
-      <h2>Cities</h2>
-    </header>
+  </style>
+</head>
 
-    <section>
-      <nav>
-        <ul>
-          <li><a href="http://">India</a></li>
-          <li><a href="http://">USA</a></li>
-          <li><a href="htps://">China</a></li>
-        </ul>
-      </nav>
+<body>
+  <h2>CSS Layout</h2>
+  <p>this is a paragraph tag</p>
 
-      <article>
-        <h1>India</h1>
-        <p>
-          India, officially the Republic of India (Hindi: Bhārat Gaṇarājya),[23]
-          is a country in South Asia. It is the seventh-largest country by area,
-          the second-most populous country, and the most populous democracy in
-          the world.
-        </p>
-        <p>
-          Bounded by the Indian Ocean on the south, the Arabian Sea on the
-          southwest, and the Bay of Bengal on the southeast, it shares land
-          borders with Pakistan to the west;[f] China, Nepal, and Bhutan to the
-          north; and Bangladesh and Myanmar to the east. In the Indian Ocean,
-          India is in the vicinity of Sri Lanka and the Maldives; its Andaman
-          and Nicobar Islands share a maritime border with Thailand, Myanmar and
-          Indonesia.
-        </p>
-      </article>
-    </section>
+  <header>
+    <h2>Cities</h2>
+  </header>
 
-    <footer>
-      <p>Footer</p>
-    </footer>
-  </body>
+  <section>
+    <nav>
+      <ul>
+        <li><a href="http://">India</a></li>
+        <li><a href="http://">USA</a></li>
+        <li><a href="htps://">China</a></li>
+      </ul>
+    </nav>
+
+    <article>
+      <h1>India</h1>
+      <p>
+        India, officially the Republic of India (Hindi: Bhārat Gaṇarājya),[23]
+        is a country in South Asia. It is the seventh-largest country by area,
+        the second-most populous country, and the most populous democracy in
+        the world.
+      </p>
+      <p>
+        Bounded by the Indian Ocean on the south, the Arabian Sea on the
+        southwest, and the Bay of Bengal on the southeast, it shares land
+        borders with Pakistan to the west;[f] China, Nepal, and Bhutan to the
+        north; and Bangladesh and Myanmar to the east. In the Indian Ocean,
+        India is in the vicinity of Sri Lanka and the Maldives; its Andaman
+        and Nicobar Islands share a maritime border with Thailand, Myanmar and
+        Indonesia.
+      </p>
+    </article>
+  </section>
+
+  <footer>
+    <p>Footer</p>
+  </footer>
+</body>
+
 </html>

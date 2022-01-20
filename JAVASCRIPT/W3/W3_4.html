@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+  </script>
+  <link rel="stylesheet" href="style.css">
+  </>
+  <title>W3 school JS</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Here we are making a script tag js</h1>
+    <p id="demo1">this is my first js</p>
+    <button onclick="yo()">click me..!</button>
+    <hr />
+    <hr />
+    <!-- use of document.write -->
+    <h2>Use of the document.write() function</h2>
+    <p>use of a paragraph tag</p>
+
+    <button onclick="yo1()">Click me..!</button>
+    <hr />
+    <hr />
+    <!-- use of window.alert() -->
+    <script>
+      window.alert(20 + 744);
+      alert(1 + 1);
+
+    </script>
+    <!-- use of the console.log() -->
+    <script>
+      console.log(5 + 2);
+
+    </script>
+    <!-- use of window.print-->
+    <h1>Use the console.print() function</h1>
+    <p>Click the button below to to print the screen.</p>
+    <button onclick="print1()">Click Me</button>
+    <hr>
+    <hr>
+    <p id="sum"></p>
+  </div>
+  <script>
+    function yo() {
+      document.getElementById("demo1").innerHTML = "My name is sahil singh";
+    }
+
+    function yo1() {
+      document.write(8 + 9 + 2 + 3 + 4);
+    }
+
+    function print1() {
+      window.print();
+    }
+    const price1 = 5;
+    const price2 = 6;
+    // price2=price2+10;// not posible
+    let total = price1 + price2;
+    document.getElementById("sum").innerHTML =
+      "The total is: " + total;
+
+  </script>
+</body>
+
+</html>
