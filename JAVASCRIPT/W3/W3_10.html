@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="style.css">
+    </link>
+    <title>W3 school JS</title>
+    <style>
+        p {
+            color: rgb(43, 226, 19);
+            font-weight: bold;
+        }
+
+        hr {
+            color: rgb(233, 213, 32);
+        }
+
+        .container {
+            border: 1px solid rgb(233, 213, 32);
+        }
+
+        body {
+            background-color: rgba(238, 30, 75, 0.842);
+            color: rgb(233, 213, 32);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Use of the typeof function</h1>
+        <h2>typeof function</h2>
+        <p id="TYPE_1"></p>
+        <hr>
+        <hr>
+        <h2>typeof function</h2>
+        <p id="TYPE_2"></p>
+        <hr>
+        <hr>
+        <h2>JavaScript Array Object</h2>
+        <p id="ARR_1"></p>
+        <hr>
+        <hr>
+        <h2>typeof function</h2>
+        <p id="TYPE_3"></p>
+    </div>
+    <script>
+        {
+            document.getElementById("TYPE_1").innerHTML =
+                typeof "john" + "<br>" +
+                typeof 3.14 + "<br>" +
+                typeof NaN + "<br>" +
+                typeof false + "<br>" +
+                typeof [1, 2, 3, 4] + "<br>" +
+                typeof {
+                    name: 'john',
+                    age: 34
+                } + "<br>" +
+                typeof new Date() + "<br>" +
+                typeof
+
+            function () {} + "<br>" +
+            typeof myCar + "<br>" +
+                typeof null;
+        }
+
+        {
+            document.getElementById("TYPE_2").innerHTML =
+                "john".constructor + "<br>" +
+                (3.14).constructor + "<br>" +
+                false.constructor + "<br>" + [1, 2, 3, 4].constructor + "<br>" + {
+                    name: 'john',
+                    age: 34
+                }.constructor + "<br>" +
+                new Date().constructor + "<br>" +
+                function () {}.constructor;
+        } {
+            const fruits = ["Banana", "Orange", "Apple", "Mango"];
+            document.getElementById("ARR_1").innerHTML = isArray(fruits);
+
+            function isArray(myArray) {
+                return myArray.constructor === Array;
+            }
+        } {
+            document.getElementById("TYPE_3").innerHTML =
+                typeof undefined + "<br>" +
+                typeof null + "<br><br>" +
+                (null === undefined) + "<br>" +
+                (null == undefined);
+        }
+
+    </script>
+</body>
+
+</html>
