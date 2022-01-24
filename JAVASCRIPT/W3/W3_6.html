@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+  </script>
+  <link rel="stylesheet" href="style.css">
+  </link>
+  <title>W3 school JS</title>
+  <style>
+    p {
+      color: red;
+    }
+
+    hr {
+      color: white;
+    }
+
+  </style>
+</head>
+
+<body style="background-color: rgba(211, 129, 35, 0.781); color: rgb(25, 56, 194);">
+  <div class="container" style="border: 1px solid white;">
+    <h1>Working on the Arrays in javascript</h1>
+    <hr>
+    <h2>Use of the Arrays in javascript</h2>
+    <p id="arr1"></p>
+
+    <hr>
+    <hr>
+    <h2>Use of the Arrays in javascript</h2>
+    <p id="arr2"></p>
+
+
+    <hr>
+    <hr>
+    <h2>Use of the new Arrays function in javascript</h2>
+    <p id="arr3"></p>
+
+    <hr>
+    <hr>
+    <h2>Use of the Arrays in javascript</h2>
+    <p id="arr4"></p>
+
+    <hr>
+    <hr>
+    <h2>Use of change in Array element in javascript</h2>
+    <p id="arr5"></p>
+
+    <hr>
+    <hr>
+    <h2>Use of accessing Array element in javascript</h2>
+    <p id="arr6"></p>
+
+    <hr>
+    <hr>
+    <h2>Use of accessing Array element in javascript</h2>
+    <p id="arr7"></p>
+
+    <hr>
+    <hr>
+    <h2>Use of accessing Array element in javascript</h2>
+    <p id="arr8"></p>
+
+    <hr>
+    <hr>
+    <h2>Use of Loop Array element in javascript</h2>
+    <p id="arr9"></p>
+
+    <hr>
+    <hr>
+    <h2>Use of forEach Loop Array element in javascript</h2>
+    <p id="arr10"></p>
+
+    <hr>
+    <hr>
+    <h2>Use of forEach Loop Array element in javascript</h2>
+    <button onclick="nor()" class="btn btn-danger">Click Me</button>
+    <p id="arr11"></p>
+
+    <hr>
+    <hr>
+    <h2>Use of forEach Loop Array element in javascript and adding the elements</h2>
+    <p id="arr12"></p>
+
+    <hr>
+    <hr>
+    <h2>Use of forEach Loop Array element in javascript and adding the elements</h2>
+    <p id="arr13"></p>
+
+  </div>
+  <script>
+    const arr1 = ["Sahil", "Payal", "Vaibhav"];
+    document.getElementById("arr1").innerHTML = arr1;
+
+    const arr2 = [];
+    arr2[0] = "Raj";
+    arr2[1] = "Roy";
+    arr2[2] = "forcecan";
+    document.getElementById("arr2").innerHTML = arr2;
+
+    const arr3 = new Array("Roma", "Annu", "Pooja", "Payal");
+    document.getElementById("arr3").innerHTML = arr3;
+
+    const arr4 = ["Sahil", "Payal", "Vaibhav"];
+    document.getElementById("arr4").innerHTML = arr4[2];
+
+    const arr5 = ["Sahil", "Payal", "Vaibhav"];
+    arr5[2] = "Meet";
+    document.getElementById("arr5").innerHTML = arr5;
+
+    const arr6 = {
+      firstName: "Sahil",
+      lastName: "Singh",
+      email: "sahil@gmail.com"
+    }
+    // document.getElementById("arr6").innerHTML= arr6.firstName;
+    document.getElementById("arr6").innerHTML = arr6.lastName;
+
+    const arr7 = ["Sahil", "Payal", "Vaibhav", "meet"];
+    document.getElementById("arr7").innerHTML = arr7.length;
+
+    const arr8 = ["Sahil", "Payal", "Vaibhav"];
+    document.getElementById("arr8").innerHTML = arr8[arr8.length - 1];
+
+    const arr9 = ["Sahil", "Payal", "Vaibhav"];
+    let len = arr9.length;
+    let num = "<ul>";
+    for (let i = 0; i < len; i++) {
+      num += "<li>" + arr9[i] + "</li>";
+    }
+    num += "</ul>";
+    document.getElementById("arr9").innerHTML = num;
+
+    const arr10 = ["Banana", "Orange", "Apple", "Mango"];
+    let text = "<ul>";
+    arr10.forEach(for_each);
+    text += "</ul>";
+    document.getElementById("arr10").innerHTML = text;
+
+    function for_each(value) {
+      text += "<li>" + value + "</li>";
+    }
+
+    const arr11 = ["Sahil", "Payal", "Vaibhav"];
+    document.getElementById("arr11").innerHTML = arr11;
+
+    function nor() {
+      arr11.push("Roy");
+      document.getElementById("arr11").innerHTML = arr11;
+    }
+
+    const arr12 = ["Sahil", "Payal", "Vaibhav"];
+    arr12[6] = "Meet";
+    let leny = arr12.length;
+    let texty = "";
+    for (i = 0; i < leny; i++) {
+      texty += arr12[i] + "<br>";
+    }
+    document.getElementById("arr12").innerHTML = texty;
+
+    const arr13 = [];
+    arr13["fname"] = "Payal";
+    arr13["lname"] = "Singh";
+    arr13["email"] = "payal@gmail.com";
+    document.getElementById("arr13").innerHTML = arr13[0] + " " + arr13.length;
+
+  </script>
+</body>
+
+</html>

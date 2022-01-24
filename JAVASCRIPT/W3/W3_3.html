@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+  </script>
+  <link rel="stylesheet" href="style.css">
+  </>
+  <title>W3 school JS</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2>JavaScript Statements</h2>
+    <p>we can do <b>Arthematic</b> statements like these:</p>
+    <p id="Add1"></p>
+    <p id="Add2"></p>
+    <button type="button" class="btn btn-success" onclick="add()">
+      click me
+    </button>
+    <hr />
+    <hr />
+    <!-- -->
+    <p id="name_1"></p>
+
+    <p id="name_2"></p>
+  </div>
+  <script>
+    function add() {
+      let a, b, c;
+      a = 5;
+      b = 10;
+      // c = a + b;
+      document.getElementById("Add1").innerHTML =
+        "The value of C after Add " + c + ".";
+      // c;
+
+      document.getElementById("Add2").innerHTML =
+        // "The value of C after sub " + c + ".";
+        a + b;
+    }
+
+    let firstName, lastName;
+    firstName = "Sahil";
+    lastName = "Singh";
+    document.getElementById("name_1").innerHTML = firstName;
+    document.getElementById("name_2").innerHTML = lastName;
+
+  </script>
+</body>
+
+</html>

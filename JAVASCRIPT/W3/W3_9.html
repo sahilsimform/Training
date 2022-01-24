@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="style.css">
+    </link>
+    <title>W3 school JS</title>
+    <style>
+        p {
+            color: rgb(230, 31, 31);
+            font-weight: bold;
+        }
+
+        hr {
+            color: rgb(26, 30, 231);
+        }
+
+        .container {
+            border: 1px solid rgb(26, 30, 231);
+        }
+
+        body {
+            background-color: rgba(227, 55, 233, 0.658);
+            color: rgb(26, 30, 231);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>JavaScript Loops/Iterable</h1>
+        <hr>
+        <h2>For Loop</h2>
+        <p id="FOR_1"></p>
+        <hr>
+        <hr>
+        <h2>For Loop</h2>
+        <p id="FOR_2"></p>
+        <hr>
+        <hr>
+        <h2>For Loop</h2>
+        <p id="FOR_3"></p>
+        <hr>
+        <hr>
+        <h2>Iterable</h2>
+        <p id="ITER_1"></p>
+        <hr>
+        <hr>
+        <h2>Iterable</h2>
+        <p id="ITER_2"></p>
+        <hr>
+        <hr>
+        <h2>Iterable</h2>
+        <p id="ITER_3"></p>
+        <hr>
+        <hr>
+        <h2>Iterable</h2>
+        <p id="ITER_4"></p>
+        <hr>
+        <hr>
+        <h2>SET 1</h2>
+        <p id="SET_1"></p>
+        <hr>
+        <hr>
+        <h2>SET 2</h2>
+        <p id="SET_2"></p>
+        <hr>
+        <hr>
+        <h2>SET 3</h2>
+        <p id="SET_3"></p>
+        <hr>
+        <hr>
+        <h2>SET 4</h2>
+        <p id="SET_4"></p>
+        <hr>
+        <hr>
+        <h2>SET 5</h2>
+        <p id="SET_5"></p>
+        <hr>
+        <hr>
+        <h2>SET 6</h2>
+        <p id="SET_6"></p>
+        <hr>
+        <hr>
+        <h2>SET 7 Value</h2>
+        <p id="SET_7"></p>
+        <hr>
+        <hr>
+        <h2>SET 8 Value</h2>
+        <p id="SET_8"></p>
+        <hr>
+        <hr>
+        <h2>MAP 1 Value</h2>
+        <p id="MAP_1"></p>
+        <hr>
+        <hr>
+        <h2>MAP 2 Value</h2>
+        <p id="MAP_2"></p>
+        <hr>
+        <hr>
+        <h2>MAP 3 Value</h2>
+        <p id="MAP_3"></p>
+        <hr>
+        <hr>
+        <h2>MAP 4 Value</h2>
+        <p id="MAP_4"></p>
+        <hr>
+        <hr>
+        <h2>MAP 5 Value</h2>
+        <p id="MAP_5"></p>
+        <hr>
+        <hr>
+        <h2>MAP 6 Value</h2>
+        <p id="MAP_6"></p>
+        <hr>
+        <hr>
+        <h2>MAP 7 Value</h2>
+        <p id="MAP_7"></p>
+        <hr>
+        <hr>
+        <h2>MAP 8 Value</h2>
+        <p id="MAP_8"></p>
+    </div>
+    <script>
+        {
+            let text = "";
+            for (let i = 0; i < 10; i++) {
+                if (i === 3) {
+                    break;
+                }
+                text += "The Number is " + i + "<br>";
+            }
+            document.getElementById("FOR_1").innerHTML = text;
+        } {
+            let text = "";
+            for (let i = 0; i < 10; i++) {
+                if (i === 3) {
+                    continue;
+                }
+                text += "The Number is " + i + "<br>";
+            }
+            document.getElementById("FOR_2").innerHTML = text;
+        } {
+            const cars = ["BMW", "Volvo", "KIA", "Honda"];
+            let text = "";
+            list: {
+                text += cars[0] + "<br>";
+                text += cars[1] + "<br>";
+                break list;
+                text += cars[2] + "<br>";
+                text += cars[3] + "<br>";
+            }
+            document.getElementById("FOR_3").innerHTML = text;
+        } {
+            const name = "Sahil Singh";
+            let text = "";
+            for (const x of name) {
+                text += x + "<br>";
+            }
+            document.getElementById("ITER_1").innerHTML = text;
+        } {
+            const letter = ["a", "b", "c", "d"];
+            let text = "";
+            for (const x of letter) {
+                text += x + "<br>";
+            }
+            document.getElementById("ITER_2").innerHTML = text;
+        } {
+            const letters = new Set(["g", "h", "j", "k"]);
+            let text = "";
+            for (const x of letters) {
+                text += x + "<br>";
+            }
+            document.getElementById("ITER_3").innerHTML = text;
+        } {
+            const fruits = new Map([
+                ["Apple", 500],
+                ["Banana", 200],
+                ["Orange", 100],
+                ["Kivi", 700]
+            ]);
+            let text = "";
+            for (const x of fruits) {
+                text += x + "<br>";
+            }
+            document.getElementById("ITER_4").innerHTML = text;
+        } {
+            const letters = new Set(["q", "w", "e", "r", "t", "y"]);
+            document.getElementById("SET_1").innerHTML = letters.size;
+        } {
+            const letters = new Set();
+            letters.add("f");
+            letters.add("g");
+            letters.add("h");
+            letters.add("j");
+            document.getElementById("SET_2").innerHTML = letters.size;
+        } {
+            const letters = new Set();
+            const a = "a";
+            const b = "b";
+            const c = "c";
+            const d = "d";
+            const e = "e";
+            letters.add(a);
+            letters.add(b);
+            letters.add(c);
+            letters.add(d);
+            letters.add(e);
+            document.getElementById("SET_3").innerHTML = letters.size;
+        } {
+            const letters = new Set(["a", "b", "c", "d", "t", "e", "f"]);
+            letters.add("v");
+            letters.add("b");
+            document.getElementById("SET_4").innerHTML = letters.size
+        } {
+            const letters = new Set();
+            letters.add("a");
+            letters.add("a");
+            letters.add("b");
+            letters.add("c");
+            letters.add("d");
+            letters.add("d");
+            document.getElementById("SET_5").innerHTML = letters.size;
+        } {
+            const letters = new Set(["a", "b", "c", "d"]);
+            let text = "";
+            letters.forEach(function (value) {
+                text += value + "<br>";
+            })
+            document.getElementById("SET_6").innerHTML = text;
+        } {
+            const letters = new Set(["a", "b", "c", "d", "t"]);
+            document.getElementById("SET_7").innerHTML = letters.values();
+        } {
+            const letters = new Set(["a", "b", "c", "d", "t"]);
+            let text = "";
+            for (const x of letters.values()) {
+                text += x + "<br>";
+            }
+            document.getElementById("SET_8").innerHTML = text;
+        } {
+            const fruit = new Map([
+                ["Apple", 500],
+                ["Orange", 100],
+                ["Kivi", 700]
+            ]);
+            document.getElementById("MAP_1").innerHTML = fruit.get("Kivi")
+        } {
+            const fruit = new Map([
+                ["Apple", 500],
+                ["Orange", 100],
+                ["Kivi", 700]
+            ]);
+            fruit.set("Apple", 200);
+            document.getElementById("MAP_2").innerHTML = fruit.get("Apple");
+        } {
+            const fruit = new Map([
+                ["Apple", 500],
+                ["Orange", 100],
+                ["Kivi", 700],
+                ["mango", 400]
+            ]);
+            document.getElementById("MAP_3").innerHTML = fruit.get("Apple");
+            document.getElementById("MAP_4").innerHTML = fruit.size;
+            fruit.delete("Apple");
+            document.getElementById("MAP_5").innerHTML = fruit.size;
+            document.getElementById("MAP_6").innerHTML = fruit.has("Kivi");
+            let text = "";
+            fruit.forEach(function (value, key) {
+                text += key + '=' + value + "<br>"
+            })
+            document.getElementById("MAP_7").innerHTML = text;
+        } {
+            const fruit = new Map([
+                ["Apple", 500],
+                ["Orange", 100],
+                ["Kivi", 700],
+                ["mango", 400]
+            ]);
+            let text = "";
+            for (const x of fruit.entries()) {
+                text += x + "<br>";
+            }
+            document.getElementById("MAP_8").innerHTML = text;
+        }
+
+    </script>
+</body>
+
+</html>
