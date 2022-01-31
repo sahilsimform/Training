@@ -58,13 +58,42 @@
 // People_1 = UpdatingPeople;
 // console.log(People_1(2, "Pooja"));
 
-interface Numlist {
-  [index: number]: number;
-}
-let numArr: Numlist = [1, 2, 3];
-console.log(numArr[0]);
-console.log(numArr[1]);
+// interface Numlist {
+//   [index: number]: number;
+// }
+// let numArr: Numlist = [1, 2, 3];
+// console.log(numArr[0]);
+// console.log(numArr[1]);
 
-setTimeout(function () {
-  console.log("Hello World");
-}, 5000);
+// setTimeout(function () {
+//   console.log("Hello World");
+// }, 5000);
+
+// const sayHello = function (a) {
+//   return function () {
+//     console.log("Hello!" + a);
+//   };
+// };
+// function outside() {
+//   var x = 5;
+//   function inside(x) {
+//     return x * 2;
+//   }
+//   return inside;
+// }
+
+// outside()(10); // returns 20 instead of 10
+
+// const myFunc = sayHello(3);
+// myFunc();
+// // Hello!
+
+function outside() {
+  var x = 5;
+  function inside(x) {
+    return x * 2;
+  }
+  return inside;
+}
+
+console.log(outside()(10)); // returns 20 instead of 10
