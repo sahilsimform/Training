@@ -25,11 +25,11 @@ console.log(Arr7[0]);
 console.log(Arr7[1]);
 console.log(Arr7[2]);
 var Arr8 = ["Sahil", "Pooja", "Sahil", "Roy"];
-for (var i in Arr8) {
-    console.log(Arr8[i]);
+for (var i_1 in Arr8) {
+    console.log(Arr8[i_1]);
 }
-for (var i = 0; i < Arr8.length; i++) {
-    console.log(Arr8[i]);
+for (var i_2 = 0; i_2 < Arr8.length; i_2++) {
+    console.log(Arr8[i_2]);
 }
 var Arr9 = ["Sahil", "Pooja", "Roy", "Sopnil"];
 Arr9.push("Payal");
