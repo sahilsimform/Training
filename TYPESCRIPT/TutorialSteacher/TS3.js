@@ -1,0 +1,33 @@
+var str = "Hello TypeScript";
+console.log(str.charAt(0)); // returns 'H'
+console.log(str.charAt(2)); // returns 'l'
+var str1 = "Singh";
+var str2 = "Singh";
+var name1 = str1.concat(str2);
+var name2 = str1.concat("  ", str2);
+var name3 = str1.concat(" Ms. ", "Payal");
+console.log(name1);
+console.log(name2);
+console.log(name3);
+var str3 = "Sahil Singh";
+console.log(str3.indexOf("h"));
+console.log(str3.indexOf("i"));
+console.log(str3.indexOf("g"));
+console.log(str3.indexOf("h"));
+var Name4 = "Sahil Singh";
+var Name5 = "Payal Singh";
+console.log(Name4.replace("Sahil", "Sopnil"));
+console.log(Name4.replace("Sahil", Name5));
+var str4 = "Apple,Orange,Banana";
+var str5 = ",";
+console.log(str4.split(str5));
+console.log(str4.split(","));
+console.log(str4.split(",", 2));
+console.log(str4.split(",", 1));
+console.log(str4.split(",", 0));
+var str6 = "my name is Sahil";
+console.log(str6.toUpperCase());
+var str7 = "my name is Sahil";
+console.log(str7.toLowerCase());
+var bo = true;
+console.log(bo);
